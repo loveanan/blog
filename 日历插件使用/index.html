@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/pikaday.css">
+	<link rel="stylesheet" href="css/site.css">
+	<style>
+		#briefing{
+			font-size: 15px;
+			color: #ccc;
+		}
+		#datepicker{ border: none;}
+		#Disconunt-Percecrt, #Disconunt-Amount{
+			width: 350px;
+			height: 15px;
+			margin: 10px;
+			margin-left: 0;
+		}
+		h4{
+			padding: 0;
+			margin: 0;
+			height: 15px;
+			float: left;
+		}
+		#DP, #DA{
+			padding: 0;
+			margin: 0 20px;
+			height: 15px;
+			font-size: 15px;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<div class="flow-element">
+			<h2>Step 2: Select Early Payment Date</h2>
+			<p id="briefing">Select diffevent dates to see diffevent discount rates</p>
+			<label for="datepicker">Early Payment Date</label>
+			<input type="text" id="datepicker">
+			<br>
+			<div id="Disconunt-Percecrt">
+				<h4>Disconunt Percecrt</h4>
+				<p id="DP">12.07%</p>
+			</div>
+			<br>
+			<div id="Disconunt-Amount">
+				<h4>Disconunt Amount</h4>
+				<p id="DA">$842.65</p>
+			</div>
+
+		</div>
+		<div class="flow-element">
+			<div id="container"></div>
+		</div>
+	</div>
+	<script src="js/pikaday.js"></script> 
+	<script>
+
+	    var picker = new Pikaday(
+	    {
+	        field: document.getElementById('datepicker'),
+	        firstDay: 1,
+	        minDate: new Date('2000-01-01'),
+	        maxDate: new Date('2020-12-31'),
+	        yearRange: [2000, 2020],
+	        bound: false,
+	        container: document.getElementById('container'),
+	    });
+	  
+
+    </script>
+</body>
+</html>
